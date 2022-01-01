@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	   <style>
+      table,
+      th,
+      td {
+        padding: 10px;
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+    </style>
+	
+	<title>Bank</title>
+</head>
+<body>
+	<table>
+  <caption>HDFC BANK</caption>
+  <tr>
+    <th>S.No</th>
+    <th>Service</th>
+  </tr>
+  <tr th:each="service,status: ${services}">
+    <td th:text="${status.index+1}" />
+    <td th:text="${service}" />
+</tr>
+</table>
+</body>
+</html>
